@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	      android:orientation="vertical"
+	      android:gravity="center_horizontal"
+	      android:layout_width="fill_parent"
+	      android:layout_height="fill_parent">
+
+  <!-- TITLE CONTAINER -->
+  <TextView android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/title"
+	    android:textSize="20sp"
+	    android:layout_gravity="left"
+	    android:text="@string/title_label" />
+
+  <!-- EQUATION CONTAINER PLUS ENTRIES -->
+  <!-- EQUATION -->
+  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="vertical"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+    <GridView android:id="@+id/equationGrid"
+	      android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:horizontalSpacing="0px"
+	      android:numColumns="6"
+	      android:columnWidth="48px"
+	      android:stretchMode="none"
+	      android:gravity="center" />
+  </LinearLayout>
+  <!-- STATUS -->
+  <TextView android:id="@+id/statusLabel"
+	    android:textSize="18sp"
+	    android:textColor="#00b"
+	    android:textStyle="bold"
+	    android:paddingBottom="20px"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content" />  
+  <!-- ENTRY FIELDS -->
+  <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:stretchColumns="0,1">
+    <TableRow>
+      <TextView android:layout_width="wrap_content"
+		android:layout_height="fill_parent"
+		android:textSize="16sp"
+		android:paddingRight="50px"
+		android:layout_gravity="left"
+		android:text="@string/character_in_label" />
+      <polaris.games.multiplication.ImmediateCompleteTextView android:id="@+id/characterGuess"
+			    android:textColor="#0b0"
+			    android:textSize="16sp"
+			    android:textStyle="bold"
+			    android:minWidth="100px"
+			    android:typeface="monospace"
+			    android:layout_gravity="right"
+			    android:layout_width="wrap_content"
+			    android:layout_height="fill_parent" />
+    </TableRow>
+    <TableRow>
+      <TextView android:layout_width="wrap_content"
+		android:layout_height="fill_parent"
+		android:textSize="16sp"
+		android:paddingRight="50px"
+		android:layout_gravity="left"
+		android:text="@string/digit_in_label" />
+      <polaris.games.multiplication.ImmediateCompleteTextView android:id="@+id/digitGuess"
+			    android:textColor="#0b0"
+			    android:textSize="16sp"
+			    android:textStyle="bold"
+			    android:minWidth="100px"
+			    android:typeface="monospace"
+			    android:layout_gravity="right"
+			    android:layout_width="wrap_content"
+			    android:layout_height="fill_parent" />
+    </TableRow>
+  </TableLayout>
+  <Button android:id="@+id/guessButton"
+	  android:text="@string/guess_button_label"
+	  android:textSize="20sp"
+	  android:maxWidth="200px"
+	  android:textStyle="bold"
+	  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content" />
+</LinearLayout>
